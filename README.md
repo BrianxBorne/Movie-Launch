@@ -1,17 +1,15 @@
-# <p align="center">
-
-  <img src="screenshots/velocity Logo.png" alt="Velocity Studios" width="88">
-</p>
-
-<h1 align="center">Velocity Studios</h1>
-
 <p align="center">
-A cinematic movie launch platform built with Next.js and Laravel.
+  <table>
+    <tr>
+      <td>
+        <img src="screenshots/velocity%20Logo.png" alt="Velocity Studios" width="50" height="50" />
+      </td>
+      <td>
+        <h3 style="margin: 0;">Velocity Studios</h3>
+      </td>
+    </tr>
+  </table>
 </p>
-
----
-
-## Preview
 
 ### Desktop
 
@@ -19,9 +17,13 @@ A cinematic movie launch platform built with Next.js and Laravel.
 | ------------------------- |
 | ![](screenshots/Hero.png) |
 
-| Movie Grid                        | Movie Modal                |
-| --------------------------------- | -------------------------- |
-| ![](screenshots/Movie%20grid.png) | ![](screenshots/Modal.png) |
+| Movie Grid                        |
+| --------------------------------- | 
+| ![](screenshots/Movie%20grid.png) |
+
+| Movie Modal                |
+| -------------------------- |
+| ![](screenshots/Modal.png) |
 
 | Newsletter                      |
 | ------------------------------- |
@@ -35,25 +37,22 @@ A cinematic movie launch platform built with Next.js and Laravel.
 
 ---
 
-## Stack
+## Tech Stack
 
-**Frontend**
+| Category | Technologies |
+|----------|--------------|
+| **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS, Framer Motion |
+| **Backend** | Laravel, PHP, MySQL |
 
-* Next.js 16
-* React 19
-* TypeScript
-* Tailwind CSS
-* Framer Motion
 
-**Backend**
+## Project Structure
 
-* Laravel
-* PHP
-* MySQL
-
----
-
-## Structure
+| Path | Description |
+|------|-------------|
+| `api/` | Laravel backend |
+| `frontend/` | Next.js frontend |
+| `screenshots/` | Project screenshots |
+| `README.md` | Project documentation |
 
 ```text
 Movie-Launch/
@@ -63,67 +62,60 @@ Movie-Launch/
 └── README.md
 ```
 
----
 
 ## Run Locally
 
-### API
+### Backend (API)
 
-```bash
-cd api
+| Step | Command |
+|------|---------|
+| Navigate to API | `cd api` |
+| Install dependencies | `composer install` |
+| Copy environment file | `cp .env.example .env` |
+| Generate application key | `php artisan key:generate` |
+| Run migrations & seed database | `php artisan migrate --seed` |
+| Start development server | `php artisan serve` |
 
-composer install
-cp .env.example .env
+**API URL**
 
-php artisan key:generate
-php artisan migrate --seed
+| Service | URL |
+|---------|-----|
+| Laravel API | `http://127.0.0.1:8000` |
 
-php artisan serve
-```
-
-Runs at:
-
-```text
-http://127.0.0.1:8000
-```
 
 ### Frontend
 
-```bash
-cd frontend
+| Step | Command |
+|------|---------|
+| Navigate to frontend | `cd frontend` |
+| Install dependencies | `npm install` |
+| Start development server | `npm run dev` |
 
-npm install
-npm run dev
-```
+**Frontend URL**
 
-Runs at:
+| Service | URL |
+|---------|-----|
+| Next.js App | `http://localhost:3000` |
 
-```text
-http://localhost:3000
-```
 
----
+## API Endpoints
 
-## API
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/films` | Retrieve all films |
+| `POST` | `/api/newsletter` | Subscribe to the newsletter |
 
-| Method | Endpoint          |
-| ------ | ----------------- |
-| GET    | `/api/films`      |
-| POST   | `/api/newsletter` |
-
----
 
 ## Trade-offs
 
 Prioritized a polished cinematic user experience over dedicated movie detail pages. Film information is presented in an animated modal, reducing navigation while keeping the interface responsive and immersive.
 
----
+
 
 ## Live Demo
 
 *Not deployed.*
 
----
 
 ## Author
 
